@@ -1,0 +1,37 @@
+{
+  "name": "decimal-to-words-by-shubham-setia",
+  "version": "1.0.0", 
+  "description": "A TypeScript utility function to convert decimal numbers to words with exact decimal values, designed for use in JavaScript and TypeScript projects.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "number",
+    "words",
+    "decimal",
+    "convert",
+    "typescript",
+    "utility",
+    "conversion",
+    "javascript",
+    "react"
+  ],
+  "author": "Shubham Setia",
+  "license": "MIT",
+  "homepage": "https://github.com/s26102000s/decimal-to-words-by-shubham-setia#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s26102000s/decimal-to-words-by-shubham-setia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/s26102000s/decimal-to-words-by-shubham-setia/issues"
+  },
+  "dependencies": {
+    "number-to-words": "^1.2.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0"
+  }
+}
