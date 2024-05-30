@@ -15,8 +15,9 @@ npm install decimal-to-words-by-shubham-setia
 or using yarn:
 
 ## bash
+```
 yarn add decimal-to-words-by-shubham-setia
-
+```
 
 ## Usage
 
