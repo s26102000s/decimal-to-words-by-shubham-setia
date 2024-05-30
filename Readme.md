@@ -9,16 +9,16 @@ A TypeScript utility function to convert decimal numbers to words with exact dec
 
 You can install this package using npm:
 
-```bash
+## bash
 npm install decimal-to-words-by-shubham-setia
 
 or using yarn:
 
-```bash
+## bash
 yarn add decimal-to-words-by-shubham-setia
 
 
-```Usage
+## Usage
 
 import { convertDecimalToWords } from 'decimal-to-words-by-shubham-setia';
 
@@ -27,15 +27,15 @@ const words = convertDecimalToWords(number);
 console.log(words); // "one hundred twenty-three point four five six"
 
 
-API
+## API
 convertDecimalToWords(num: number): string
 num: The decimal number to convert.
 Returns: The word representation of the number.
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Author
+## Author
 Created by Shubham Setia.
