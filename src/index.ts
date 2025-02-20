@@ -1,5 +1,6 @@
-import { toWords } from 'number-to-words';
+import { ToWords } from 'to-words';
 
+const toWords = new ToWords().convert;
 
 const applyTextTransform = (text: string, textTransform?: 'none' | 'capitalize' | 'uppercase' | 'lowercase'): string => {
   switch (textTransform) {
