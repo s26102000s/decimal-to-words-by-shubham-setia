@@ -27,14 +27,18 @@ yarn add decimal-to-words-by-shubham-setia
 import { convertDecimalToWords } from 'decimal-to-words-by-shubham-setia';
 
 const number = 123.456;
-const words = convertDecimalToWords(number);
-console.log(words); // "one hundred twenty-three point four five six"
+const words = convertDecimalToWords(number, 'capitalize');
+console.log(words); // "One Hundred Twenty-Three Point Four Five Six"
 ```
 
 ## API
-convertDecimalToWords(num: number): string
-num: The decimal number to convert.
+convertDecimalToWords(num: number, textTransform?: 'none' | 'capitalize' | 'uppercase' | 'lowercase'): string
+
+- `num`: The decimal number to convert.
+- `textTransform`: Optional. The text transformation to apply. Can be 'none', 'capitalize', 'uppercase', or 'lowercase'. Default is 'none'.
+
 Returns: The word representation of the number.
+
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 
