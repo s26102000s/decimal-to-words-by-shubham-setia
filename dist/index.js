@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.convertDecimalToWords = void 0;
 var to_words_1 = require("to-words");
-var toWords = new to_words_1.ToWords().convert;
+var converter = new to_words_1.ToWords();
 var applyTextTransform = function (text, textTransform) {
     switch (textTransform) {
         case 'capitalize':
@@ -24,10 +24,12 @@ var convertDecimalToWords = function (num, textTransform) {
         num = Number(num);
     }
     var _a = num.toString().split('.'), integerPart = _a[0], decimalPart = _a[1];
-    var integerWords = toWords(Number(integerPart));
+    var integerWords = converter.convert(Number(integerPart));
     if (!decimalPart)
         return applyTextTransform(integerWords, textTransform);
-    var decimalWordsArray = decimalPart.split('').map(function (digit) { return toWords(Number(digit)); });
+    var decimalWordsArray = decimalPart
+        .split('')
+        .map(function (digit) { return converter.convert(Number(digit)); });
     var decimalWords = decimalWordsArray.join(' ');
     return applyTextTransform("".concat(integerWords, " point ").concat(decimalWords), textTransform);
 };
