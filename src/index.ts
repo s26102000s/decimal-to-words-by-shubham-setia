@@ -15,7 +15,13 @@ const applyTextTransform = (text: string, textTransform?: 'none' | 'capitalize' 
   }
 };
 // Utility function to convert a decimal number to words with exact decimal values
-export const convertDecimalToWords = (num: number, textTransform?: 'none' | 'capitalize' | 'uppercase' | 'lowercase'): string => {
+export const convertDecimalToWords = (num: number|string, textTransform?: 'none' | 'capitalize' | 'uppercase' | 'lowercase'): string => {
+  if(typeof num === 'string') {
+    if(isNaN(Number(num))) {
+      return 'NaN'
+    }
+    num = Number(num);
+  }
   const [integerPart, decimalPart] = num.toString().split('.');
   const integerWords = toWords(Number(integerPart));
   if (!decimalPart) return applyTextTransform(integerWords, textTransform);
