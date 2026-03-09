@@ -1,7 +1,7 @@
 # Decimal to Words by [Shubham Setia](https://github.com/s26102000s)
 
-[![npm version](https://badge.fury.io/js/decimal-to-words-by-shubham-setia.svg)](https://badge.fury.io/js/decimal-to-words-by-shubham-setia)
-[![Build Status](https://travis-ci.org/s26102000s/decimal-to-words-by-shubham-setia.svg?branch=master)](https://travis-ci.org/s26102000s/decimal-to-words-by-shubham-setia)
+[![npm version](https://badge.fury.io/js/to-words-by-shubham-setia.svg)](https://badge.fury.io/js/to-words-by-shubham-setia)
+[![Build Status](https://travis-ci.org/s26102000s/to-words-by-shubham-setia.svg?branch=master)](https://travis-ci.org/s26102000s/to-words-by-shubham-setia)
 
 A TypeScript utility function to convert decimal numbers to words with exact decimal values, designed for use in JavaScript and TypeScript projects.
 
@@ -11,20 +11,20 @@ You can install this package using npm:
 
 ## bash
 ```
-npm install decimal-to-words-by-shubham-setia
+npm install to-words-by-shubham-setia
 ```
 
 or using yarn:
 
 ## bash
 ```
-yarn add decimal-to-words-by-shubham-setia
+yarn add to-words-by-shubham-setia
 ```
 
 ## Usage
 
 ```
-import { convertDecimalToWords } from 'decimal-to-words-by-shubham-setia';
+import { convertDecimalToWords } from 'to-words-by-shubham-setia';
 
 const number = 123.456;
 const words = convertDecimalToWords(number, 'capitalize');
