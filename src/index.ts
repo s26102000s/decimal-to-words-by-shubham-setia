@@ -23,27 +23,22 @@ export const convertDecimalToWords = (
   textTransform?: 'none' | 'capitalize' | 'uppercase' | 'lowercase'
 ): string => {
 
-  if (typeof num === 'string') {
-    if (isNaN(Number(num))) {
-      return 'NaN';
-    }
-    num = Number(num);
+  const value = typeof num === "number" ? num.toString() : num;
+
+  if (isNaN(Number(value))) {
+    return "NaN";
   }
 
-  const [integerPart, decimalPart] = num.toString().split('.');
+  const [integerPart, decimalPart] = value.split(".");
 
   const integerWords = converter.convert(Number(integerPart));
 
   if (!decimalPart) return applyTextTransform(integerWords, textTransform);
 
-  const decimalWordsArray = decimalPart
-    .split('')
-    .map(digit => converter.convert(Number(digit)));
+  const decimalWords = decimalPart
+    .split("")
+    .map((digit) => converter.convert(Number(digit)))
+    .join(" ");
 
-  const decimalWords = decimalWordsArray.join(' ');
-
-  return applyTextTransform(
-    `${integerWords} point ${decimalWords}`,
-    textTransform
-  );
+  return applyTextTransform(`${integerWords} point ${decimalWords}`, textTransform);
 };
